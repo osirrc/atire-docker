@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "Searching..."
+
+# The name of the topic file
+TOPIC=/input/topics/$1
+
+# Convert the topics from TREC XML format to one query per line for ATIRE
+atire/evaluation/trec2query $TOPIC t > queries.txt
+
+# call ATIRE to do the search to completion
+#JASSv2/JASSv1/jass queries.txt 100 1000000000 -d
+atire/bin/atire -q queries.txt -k100 -RBM25 -l100 -et
+
+# now copy the output to the output directory
+cp ant.out /output/ANT_100_percent.txt
+

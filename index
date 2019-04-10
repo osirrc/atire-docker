@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+
+print("Indexing...")
+
+# The number of CPU cores available
+cores = os.cpu_count()
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--collections", nargs="+", type=str, required=True, help="the collection names")
+
+args = parser.parse_args()
+
+# Iterate over the [name]=[path] pairs
+for name in args.collections:
+	if name.lower() == "robust04":
+		subprocess.run("/index_robust04 " + name, shell=True)
+	else:
+		print("Unknown collection: " + name)

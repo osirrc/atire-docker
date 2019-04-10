@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -ev
+
+# Get ATIRE
+hg clone http://www.atire.org/hg/atire
+
+# make ATIRE and trec2query
+cd atire 
+make
+cd evaluation
+make
+cd ..
+cd ..
