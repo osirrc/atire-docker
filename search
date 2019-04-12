@@ -9,8 +9,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--collection", required=True, type=str, help="the name of the collection")
 parser.add_argument("--topic", required=True, type=str, help="the name of the topic file")
 parser.add_argument("--topic_format", default="TREC", type=str, help="the format of the topic file")
+parser.add_argument("--top_k", default="100", type=int, help="number of results in results list")
 
 args, unknown = parser.parse_known_args()
 
 if args.collection.lower() == "robust04":
-	subprocess.run("/search_robust04 " + args.topic, shell=True)
+	subprocess.run("/search_robust04 " + args.topic + " " + str(args.top_k), shell=True)

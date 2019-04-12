@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# the first parameter is the name of the topic file.
+# the second paramter if the top-k value
+
 echo "Searching..."
 
 # The name of the topic file
@@ -10,7 +13,7 @@ atire/evaluation/trec2query $TOPIC t > queries.txt
 
 # call ATIRE to do the search to completion
 #JASSv2/JASSv1/jass queries.txt 100 1000000000 -d
-atire/bin/atire -q queries.txt -k100 -RBM25 -l100 -et
+atire/bin/atire -q queries.txt -k$2 -RBM25 -l$2 -et
 
 # now copy the output to the output directory
 cp ant.out /output/ANT_100_percent.txt
