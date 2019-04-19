@@ -5,8 +5,8 @@
 
 echo "Searching..."
 
-# The name of the topic file
-TOPIC=/input/topics/$1
+# The path of the topic file
+TOPIC=$1
 
 # Convert the topics from TREC XML format to one query per line for ATIRE
 atire/evaluation/trec2query $TOPIC t > queries.txt
