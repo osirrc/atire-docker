@@ -16,5 +16,7 @@ for collection in args.json["collections"]:
 	name, path = collection["name"], collection["path"]
 	if name.lower() == "robust04":
 		subprocess.run("/index_robust04 " + path, shell=True)
+	elif name.lower() == "core17":
+		subprocess.run("/index_core17 " + path, shell=True)
 	else:
 		print("Unknown collection: " + name)

@@ -13,3 +13,5 @@ args, unknown = parser.parse_known_args()
 
 if args.json["collection"]["name"].lower() == "robust04":
 	subprocess.run("/search_robust04 " + args.json["topic"]["path"] + " " + str(args.json["top_k"]), shell=True)
+elif args.json["collection"]["name"].lower() == "core17":
+	subprocess.run("/search_core17 " + args.json["topic"]["path"] + " " + str(args.json["top_k"]), shell=True)

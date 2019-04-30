@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# The path of the collection
+COLLECTION=$1
+
+# The path of the default directory
+cwd=$(pwd)
+
+# do the indexing job using ATIRE
+cd $COLLECTION
+$cwd/atire/bin/index -N10000 -findex $cwd/index.aspt -rrtrec:tag:nitf:doc-id "*.tgz"
