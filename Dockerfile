@@ -12,6 +12,8 @@ COPY index index
 COPY search search
 COPY index_robust04 index_robust04
 COPY search_robust04 search_robust04
+COPY index_core17 index_core17
+COPY search_core17 search_core17
 
 # Set working directory
 
