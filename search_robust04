@@ -12,9 +12,22 @@ TOPIC=$1
 atire/evaluation/trec2query $TOPIC t > queries.txt
 
 # call ATIRE to do the search to completion
-#JASSv2/JASSv1/jass queries.txt 100 1000000000 -d
 atire/bin/atire -q queries.txt -k$2 -RBM25 -l$2 -et
 
 # now copy the output to the output directory
-cp ant.out /output/ANT_r4_100_percent.txt
+cp ant.out /output/ANT_r4_100_percent.BM25.txt
+
+
+# call ATIRE to do the search to completion
+atire/bin/atire -q queries.txt -k$2 -RBM25+:2.0:0.5:0.2 -Qr:2:81 -QRBM25+:1.1:0.6:0.6 -l$2 -et
+
+# now copy the output to the output directory
+cp ant.out /output/ANT_r4_100_percent.BM25+.s-stem.RF.txt
+
+
+# call ATIRE to do the search to completion
+atire/bin/atire -q queries.txt -k$2 -RBM25+:2.0:0.5:0.2 -l$2 -et
+
+# now copy the output to the output directory
+cp ant.out /output/ANT_r4_100_percent.BM25+.txt
 
