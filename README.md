@@ -1,3 +1,7 @@
+# OSIRRC Docker Image for ATIRE
+
+[![Generic badge](https://img.shields.io/badge/DockerHub-go%21-yellow.svg)](https://hub.docker.com/r/osirrc2019/atire)
+
 ATIRE Docker image for the SIGIR OSIRRC 2019 Open Source Challenge.
 
 For details on ATIRE see (and please cite):
