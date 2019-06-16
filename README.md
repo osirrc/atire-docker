@@ -9,6 +9,7 @@ python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic top
 [![Generic badge](https://img.shields.io/badge/DockerHub-go%21-yellow.svg)](https://hub.docker.com/r/osirrc2019/atire)
 
 [**Andrew Trotman**](https://github.com/andrewtrotman)
+
 This readme is heavily based (i.e. copied from) the Anserini readme.
 
 This is the docker image for [ATIRE](http://atire.org) conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
