@@ -51,8 +51,8 @@ BM25, BM25+ with s-stemming an Rocchio relevance feedback.  Currently hard coded
 The following numbers should be able to be re-produced using the scripts provided by the jig.
 
 ### robust04
-+ **BM25+**: k1=2.0, b=0.5, d=0.2 with Rocchio relevance feedback with d=2, t=81, then BM25+  k1=1.1, b=0.6, d=0.6.  All with s-stemming
 [TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz).
++ **BM25+**: k1=2.0, b=0.5, d=0.2 with Rocchio relevance feedback with d=2, t=81, then BM25+  k1=1.1, b=0.6, d=0.6.  All with s-stemming
 
 |Metric | Score |
 |----|----|
