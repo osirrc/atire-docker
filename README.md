@@ -63,7 +63,9 @@ The following numbers should be able to be re-produced using the scripts provide
 [TREC 2017 Common Core Track Topics](https://trec.nist.gov/data/core/core_nist.txt).
 + **BM25**: k1=0.9, b=0.4 (Robertson et al., 1995) 
 
-| map | 0.1436 |
+|Metric | Score |
+|----|----|
+| MAP | 0.1436 |
 | P@30 | 0.4087 |
 
 ## Implementation
