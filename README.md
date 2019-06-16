@@ -54,16 +54,15 @@ The following numbers should be able to be re-produced using the scripts provide
 + **BM25+**: k1=2.0, b=0.5, d=0.2 with Rocchio relevance feedback with d=2, t=81, then BM25+  k1=1.1, b=0.6, d=0.6.  All with s-stemming
 [TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz).
 
-map                   	all	0.2184
-P_30                  	all	0.3199
-
+| map | 0.2184 |
+| P@30 | 0.3199 |
 
 ### core17
 [TREC 2017 Common Core Track Topics](https://trec.nist.gov/data/core/core_nist.txt).
 + **BM25**: k1=0.9, b=0.4 (Robertson et al., 1995) 
 
-map | 0.1436
-P_30 | 0.4087
+| map | 0.1436 |
+| P@30 | 0.4087 |
 
 ## Implementation
 
