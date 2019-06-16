@@ -1,7 +1,9 @@
-[//]: # ./init.sh
-[//]: # docker build . -t atire/osirrc2019
-[//]: # python3 run.py prepare --repo atire/osirrc2019 --collections robust04=/Users/andrew/programming/JASSv2/docker/osirrc2019/robust04=trectext
-[//]: # python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic topics.robust04.301-450.601-700.txt --top_k 100 --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt
+<!--
+./init.sh
+docker build . -t atire/osirrc2019
+python3 run.py prepare --repo atire/osirrc2019 --collections robust04=/Users/andrew/programming/JASSv2/docker/osirrc2019/robust04=trectext
+python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic topics.robust04.301-450.601-700.txt --top_k 100 --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt
+-->
 
 # ATIRE OSIRRC Docker Image
 [![Generic badge](https://img.shields.io/badge/DockerHub-go%21-yellow.svg)](https://hub.docker.com/r/osirrc2019/atire)
@@ -42,24 +44,26 @@ python3 run.py search \
 e.g. ```python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic topics.robust04.301-450.601-700.txt --top_k 100 --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt```
 
 ## Retrieval Methods
-
-The Anserini image supports the following retrieval methods:
-
-+ **BM25**: k1=0.9, b=0.4 (Robertson et al., 1995)
-+ **BM25+**: k1=2.0, b=0.5, d=0.2 with Rocchio relevance feedback with d=2, t=81, then BM25+  k1=1.1, b=0.6, d=0.6.
+BM25, BM25+ with s-stemming an Rocchio relevance feedback.  Currently hard coded to the collection.
 
 ## Expected Results
 
-The following numbers should be able to be re-produced using the scripts provided in the [bin](bin) directory.
+The following numbers should be able to be re-produced using the scripts provided by the jig.
 
 ### robust04
++ **BM25+**: k1=2.0, b=0.5, d=0.2 with Rocchio relevance feedback with d=2, t=81, then BM25+  k1=1.1, b=0.6, d=0.6.  All with s-stemming
+[TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz).
 
-[TREC 2004 Robust Track Topics](http://trec.nist.gov/data/robust/04.testset.gz)... COMING SOON.
+map                   	all	0.2184
+P_30                  	all	0.3199
+
 
 ### core17
+[TREC 2017 Common Core Track Topics](https://trec.nist.gov/data/core/core_nist.txt).
++ **BM25**: k1=0.9, b=0.4 (Robertson et al., 1995) 
 
-[TREC 2017 Common Core Track Topics](https://trec.nist.gov/data/core/core_nist.txt)... COMING SOON.
-
+map | 0.1436
+P_30 | 0.4087
 
 ## Implementation
 
