@@ -25,7 +25,7 @@ The following `jig` command can be used to index TREC disks 4/5 for `robust04`:
 ```
 python3 run.py prepare \
   --repo osirrc2019/atire \
-  --tag v0.1.0 \
+  --tag 0.1.0 \
   --collections robust04=/path/to/disk45=trectext
 ```
 e.g. ```python3 run.py prepare --repo osirrc2019/atire --collections robust04=/Users/andrew/programming/JASSv2/docker/osirrc2019/robust04=trectext```
@@ -36,6 +36,7 @@ The following `jig` command can be used to perform a retrieval run on the collec
 ```
 python3 run.py search \
   --repo osirrc2019/atire \
+  --tag 0.1.0 \
   --output out/atire \
   --qrels qrels/qrels.robust04.txt \
   --topic topics/topics.robust04.txt \
