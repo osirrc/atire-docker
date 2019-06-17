@@ -5,7 +5,7 @@ python3 run.py prepare --repo atire/osirrc2019 --collections robust04=/Users/and
 python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic topics.robust04.301-450.601-700.txt --top_k 100 --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt
 -->
 
-# ATIRE OSIRRC Docker Image
+# OSIRRC Docker Image for ATIRE
 [![Generic badge](https://img.shields.io/badge/DockerHub-go%21-yellow.svg)](https://hub.docker.com/r/osirrc2019/atire)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3247156.svg)](https://doi.org/10.5281/zenodo.3247156)
 
