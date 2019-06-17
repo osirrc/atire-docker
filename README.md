@@ -108,4 +108,4 @@ The retrieval run is performed and output is placed in `/output` for the `jig` t
 
 ## Reviews
 
-+ Documentation reviewed at commit [`480b2f7`](https://github.com/osirrc/atire-docker/commit/2a83e39c3900be9b88907b901e2d1d211480b2f7) (2019-06-16) by [r-clancy](https://github.com/r-clancy/).
++ Documentation reviewed at commit [`480b2f7`](https://github.com/osirrc/atire-docker/commit/2a83e39c3900be9b88907b901e2d1d211480b2f7) (2019-06-16) by [Ryan Clancy](https://github.com/r-clancy/).
