@@ -25,10 +25,10 @@ The following `jig` command can be used to index TREC disks 4/5 for `robust04`:
 ```
 python3 run.py prepare \
   --repo osirrc2019/atire \
-  --tag v0.1.0 \
+  --tag 0.1.0 \
   --collections robust04=/path/to/disk45=trectext
 ```
-e.g. ```python3 run.py prepare --repo atire/osirrc2019 --collections robust04=/Users/andrew/programming/JASSv2/docker/osirrc2019/robust04=trectext```
+e.g. ```python3 run.py prepare --repo osirrc2019/atire --collections robust04=/Users/andrew/programming/JASSv2/docker/osirrc2019/robust04=trectext```
 
 
 The following `jig` command can be used to perform a retrieval run on the collection with the `robust04` test collection.
@@ -36,6 +36,7 @@ The following `jig` command can be used to perform a retrieval run on the collec
 ```
 python3 run.py search \
   --repo osirrc2019/atire \
+  --tag 0.1.0 \
   --output out/atire \
   --qrels qrels/qrels.robust04.txt \
   --topic topics/topics.robust04.txt \
@@ -46,9 +47,9 @@ python3 run.py search \
 For example:
 
 ```
-python3 run.py search  --repo atire/osirrc2019 --collection robust04 \
- --topic topics.robust04.301-450.601-700.txt --top_k 100 \
- --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt
+python3 run.py search --repo osirrc2019/atire --collection robust04 \
+ --topic topics/topics.robust04.txt --top_k 100 \
+ --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust04.txt
  ```
 
 ## Retrieval Methods
@@ -107,4 +108,4 @@ The retrieval run is performed and output is placed in `/output` for the `jig` t
 
 ## Reviews
 
-+ Documentation not yet reviewed
++ Documentation reviewed at commit [`480b2f7`](https://github.com/osirrc/atire-docker/commit/2a83e39c3900be9b88907b901e2d1d211480b2f7) (2019-06-16) by [Ryan Clancy](https://github.com/r-clancy/).
