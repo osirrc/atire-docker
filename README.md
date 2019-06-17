@@ -11,10 +11,9 @@ python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic top
 
 [**Andrew Trotman**](https://github.com/andrewtrotman)
 
-This readme is heavily based (i.e. copied from) the Anserini readme.
-
 This is the docker image for [ATIRE](http://atire.org) conforming to the [OSIRRC jig](https://github.com/osirrc/jig/) for the [Open-Source IR Replicability Challenge (OSIRRC) at SIGIR 2019](https://osirrc.github.io/osirrc2019/).
-This image is has been tested with the jig at commit [ca31987](https://github.com/osirrc/jig/commit/ca3198704795f2b6de8b78ed7a66bbdf1dccadb1) (6/5/2019).
+This image is available on [Docker Hub](https://hub.docker.com/r/osirrc2019/atire).
+The [OSIRRC 2019 image library](https://github.com/osirrc/osirrc2019-library) contains a log of successful executions of this image.
 
 + Supported test collections: `robust04`, and `core17`.
 + Supported hooks: `init`, `index`, `search`
@@ -44,7 +43,13 @@ python3 run.py search \
   --top_k 100"
 ```
 
-e.g. ```python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic topics.robust04.301-450.601-700.txt --top_k 100 --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt```
+For example:
+
+```
+python3 run.py search  --repo atire/osirrc2019 --collection robust04 \
+ --topic topics.robust04.301-450.601-700.txt --top_k 100 \
+ --output /Users/andrew/programming/osirrc2019/jass-docker/output --qrels qrels/qrels.robust2004.txt
+ ```
 
 ## Retrieval Methods
 BM25, BM25+ with s-stemming an Rocchio relevance feedback.  Currently hard coded to the collection.
