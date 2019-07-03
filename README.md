@@ -7,7 +7,7 @@ python3 run.py search  --repo atire/osirrc2019 --collection robust04 --topic top
 
 # OSIRRC Docker Image for ATIRE
 [![Generic badge](https://img.shields.io/badge/DockerHub-go%21-yellow.svg)](https://hub.docker.com/r/osirrc2019/atire)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3247156.svg)](https://doi.org/10.5281/zenodo.3247156)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3247155.svg)](https://doi.org/10.5281/zenodo.3247155)
 
 [**Andrew Trotman**](https://github.com/andrewtrotman)
 
